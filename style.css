@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  --size: 100%;
+  --distance: 200px;
+  --speed: 500ms;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: #000;
+  font-family: "VT323", monospace;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  height: 100%;
+  filter: contrast(25);
+  -webkit-filter: contrast(25);
+}
+
+#controls {
+  mix-blend-mode: exclusion;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#container div {
+  background: #fff;
+  filter: blur(10px);
+  width: var(--size);
+  height: var(--size);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate var(--speed) linear infinite;
+}
+
+#container a div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#container a div:nth-child(2) {
+  animation-delay: -1s;
+}
+
+#container a div:nth-child(3) {
+  animation-delay: -2s;
+}
+
+#container a div:nth-child(4) {
+  animation-delay: -3s;
+}
+
+#container a div:nth-child(5) {
+  animation-delay: -4s;
+}
+
+#container a div:nth-child(6) {
+  animation-delay: -5s;
+}
+
+#container a div:nth-child(7) {
+  animation-delay: -6s;
+}
+
+#container a:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#container a:nth-child(2) {
+  animation-delay: -1s;
+}
+
+#container a:nth-child(3) {
+  animation-delay: -2s;
+}
+
+#container a:nth-child(4) {
+  animation-delay: -3s;
+}
+
+#container a:nth-child(5) {
+  animation-delay: -4s;
+}
+
+#container a:nth-child(6) {
+  animation-delay: -5s;
+}
+
+#container a:nth-child(7) {
+  animation-delay: -6s;
+}
+
+a {
+  animation: rotate 5s linear infinite;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100px;
+  display: block;
+  margin: 25px 0;
+}
+
+/* Track Styles */
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type=range]::-webkit-slider-runnable-track {
+  background: #fff;
+  height: 2px;
+  border-radius: 1px;
+}
+
+/* Firefox */
+input[type=range]::-moz-range-track {
+  background: #fff;
+  height: 2px;
+  border-radius: 1px;
+}
+
+/* Thumb Styles */
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  margin-top: -4px;
+  /* Centers thumb on the track */
+  background-color: #fff;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+  border: none;
+  /* Removes extra border that FF applies */
+  border-radius: 0;
+  /* Removes default border-radius that FF applies */
+  background-color: #fff;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+/* hover */
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type=range]:hover::-webkit-slider-thumb {
+  background: #fff;
+}
+
+/* Firefox */
+input[type=range]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type=range]:focus-visible::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox ********/
+input[type=range]:focus-visible::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(var(--size), var(--size)) translateX(var(--distance));
+  }
+  100% {
+    transform: rotate(360deg) scale(var(--size), var(--size)) translateX(var(--distance));
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
